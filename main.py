@@ -2,6 +2,7 @@
 
 from selenium import webdriver
 from selenium.common.exceptions import *
+from time import sleep
 
 # Data manipulation
 
@@ -30,6 +31,7 @@ options.add_argument('--disable-extensions')
 
 browser = webdriver.Chrome(webdriver_path)
 browser.get(backmarket_url)
-
+sleep(3)
 search_bar = browser.find_element_by_xpath('//*[@id="header"]/div[1]/form/input')
-search_bar.send_keys(search_item).submit()
+search_bar.send_keys(search_item)
+search_bar.find_element_by_xpath('//*[@id="header"]/div[1]/form/button[2]').click()
