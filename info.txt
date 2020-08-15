@@ -1,0 +1,1 @@
+cambiar web a la que ir directamente, crear varias variables con la dirección de cada modelo

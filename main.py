@@ -35,3 +35,6 @@ sleep(3)
 search_bar = browser.find_element_by_xpath('//*[@id="header"]/div[1]/form/input')
 search_bar.send_keys(search_item)
 search_bar.find_element_by_xpath('//*[@id="header"]/div[1]/form/button[2]').click()
+
+# Click en el modelo
+search_bar.find_element_by_xpath('//*[@id="main_container"]/div/div/section/div[2]/div[2]/div[1]/div/a/div[2]/span').click()
