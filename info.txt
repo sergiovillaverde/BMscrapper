@@ -1,1 +1,4 @@
 cambiar web a la que ir directamente, crear varias variables con la dirección de cada modelo
+
+hacer una lista con el estado y el precio y despues pasarlo a un diccionario, los indices impares son keys y los pares valores
+un for que para los impares se pasen a keys y los pares a values
