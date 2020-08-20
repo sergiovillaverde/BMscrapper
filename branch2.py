@@ -21,6 +21,16 @@ precioXnegro = dict(zip(eXnegro,pXnegro))
     
 print(precioXnegro)
 
+# Esto borra lo que tenga el CSV y escribe el diccionario
 with open('precios.csv', 'w') as f:
         for key in precioXnegro.keys():
             f.write("%s,%s\n"%(key,precioXnegro[key]))
+            
+# Código para escribir en la hoja de cálculo
+# TODO encontrar la casilla correspondiente al día y la columna en la que está
+
+#letra = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','#R','S','T','U','V','W','X','Y','Z','AA','AB','AC','AD','AE','AF']
+cell = []
+for i in range(0, 5):
+    cell.insert(i, letra + (i+2))
+print(cell)

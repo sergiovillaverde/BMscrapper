@@ -1,4 +1,20 @@
-cambiar web a la que ir directamente, crear varias variables con la dirección de cada modelo
+for k == 'correcto':
+    casilla vacia = value (precio)
 
-hacer una lista con el estado y el precio y despues pasarlo a un diccionario, los indices impares son keys y los pares valores
-un for que para los impares se pasen a keys y los pares a values
+el script tiene que comprobar columnas para encontrar la fecha de hoy y después tiene que escribir debajo los precio según calidad
+tengo que imprimir los values en las casillas (for k, v in)
+
+for i in range(lista con las casillas de un mes[A1, A2, etc]):
+    blanca = sheet[i]
+    if blanca == '':
+        write los valores del dict
+
+Esto sería con la librería gspread, antes de este for el programa tiene que saber qué casilla es la vacía o haber encontrado la del día que es
+Puede buscar por día y escribir en las cinco casillas de debajo
+    Para esto puedo crear if/elif para cada letra de las casillas (A,B,C) y después los números de las casillas
+        Hacer una lista con las casillas:
+            cell = []
+            for i in range (0,5):
+                cell.append[i](letra + (i+2)) #el +2 para escribir en la casilla correcta
+for i in range(0, 5):
+    wks.update(cell,data)
