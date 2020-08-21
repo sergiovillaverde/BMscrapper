@@ -1,9 +1,14 @@
 from bs4 import BeautifulSoup
 from datetime import date
-import requests, csv
+import requests, csv, openpyxl
 import pandas as pd 
 
-today = date.today()
+today = date.today().strftime('%d-%m-%Y')
+
+def char_range(c1, c2):
+    # Generamos los caracteres que le pasemos a c1 hasta c2
+    for c in range(ord(c1), ord(c2)+1):
+        yield chr(c)
 
 url = 'https://www.backmarket.es/iphone-x-64-gb-gris-espacial-libre-segunda-mano/36833.html#?l=0'
 response = requests.get(url)
@@ -29,8 +34,20 @@ with open('precios.csv', 'w') as f:
 # Código para escribir en la hoja de cálculo
 # TODO encontrar la casilla correspondiente al día y la columna en la que está
 
-#letra = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','#R','S','T','U','V','W','X','Y','Z','AA','AB','AC','AD','AE','AF']
-cell = []
-for i in range(0, 5):
-    cell.insert(i, letra + (i+2))
-print(cell)
+wb = openpyxl.load_workbook('Libro.xlsx')
+book = wb['Hoja1']
+
+for c in char_range('B', 'Z'):
+    for n in range(2, 7):
+        casilla = c + str(n)
+        if book[casilla] is None:
+            for v in precioXnegro.values():
+                book[casilla] = v
+                wb.save('Libro.xlsx')
+
+'''
+for columnNum in range(1, book.max_column):
+    fecha = book.cell(row=1,column=columnNum).value
+    if fecha == today:
+        for i in range(5):
+            book.cell(row=(i+1),column=columnNum).value = precioXnegro[]'''
