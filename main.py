@@ -3,7 +3,7 @@ from time import sleep
 
 os.chdir(r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\Models")
 
-from Models.iphoneXnegro import iphoneXnegro # repetir esto con todos
+from Models.iphoneXnegro import iphoneXnegro
 from Models.iphoneXplata import iphoneXplata
 from Models.iphoneXRnegro import iphoneXRnegro
 from Models.iphoneXRrojo import iphoneXRrojo
@@ -36,5 +36,7 @@ try:
     iphoneXSdorado()
 
     print('Los archivos CSV están listos, el programa ha terminado.')
+    sleep(5)
+    
 except:
     print('Ha surgido un error, el programa se ha detenido.')
