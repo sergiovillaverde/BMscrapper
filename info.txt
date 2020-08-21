@@ -18,3 +18,7 @@ Puede buscar por día y escribir en las cinco casillas de debajo
                 cell.append[i](letra + (i+2)) #el +2 para escribir en la casilla correcta
 for i in range(0, 5):
     wks.update(cell,data)
+
+#############################
+
+Si column.value = today
