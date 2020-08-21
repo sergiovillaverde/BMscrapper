@@ -1,55 +1,40 @@
-# Web Scraping
-
-from selenium import webdriver
-from selenium.common.exceptions import *
+import os
 from time import sleep
 
-# Data manipulation
+os.chdir(r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\Models")
 
-import pandas as pd 
+from Models.iphoneXnegro import iphoneXnegro # repetir esto con todos
+from Models.iphoneXplata import iphoneXplata
+from Models.iphoneXRnegro import iphoneXRnegro
+from Models.iphoneXRrojo import iphoneXRrojo
+from Models.iphoneXRazul import iphoneXRazul
+from Models.iphoneXRcoral import iphoneXRcoral
+from Models.iphoneXRamarillo import iphoneXRamarillo
+from Models.iphoneXRblanco import iphoneXRblanco
+from Models.iphoneXSnegro import iphoneXSnegro
+from Models.iphoneXSplata import iphoneXSplata
+from Models.iphoneXSdorado import iphoneXSdorado
 
-# Visualization
+try:
+    print('El programa se ha iniciado.')
+    sleep(2)
+    print('Recopilando precios de iPhone X')
+    iphoneXnegro()
+    iphoneXplata()
 
-import matplotlib.pyplot as plt
-import seaborn as sns
+    print('Recopilando precios de iPhone XR.')
+    iphoneXRnegro()
+    iphoneXRrojo()
+    iphoneXRazul()
+    iphoneXRcoral()
+    iphoneXRamarillo()
+    iphoneXRblanco()
 
-webdriver_path = r'C:\Users\svill\Documents\Programación\Varios\chromedriver.exe' # r para que sea raw string
+    print('Recopilando precios de iPhone XS.')
+    iphoneXSnegro()
+    iphoneXSplata()
+    iphoneXSdorado()
 
-# URLs de los modelos de iPhone
-BlackX_URL = 'https://www.backmarket.es/iphone-x-64-gb-gris-espacial-libre-segunda-mano/36833.html#?l=0'
-#SilverX_URL = 
-#BlackXR_URL = 
-#backmarket_url = 'https://www.backmarket.es/'
-#search_item = 'iPhone X 64gb'
-
-# Select custom Chrome options, hay un fallo y no abre Chrome
-
-'''
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-options.add_argument('start-maximized')
-options.add_argument('disable-infobars')
-options.add_argument('--disable-extensions')
-'''
-# Función para iPhone X negro
-def BlackX():
-    browser = webdriver.Chrome(webdriver_path)
-    browser.get(BlackX_URL)
-    #sleep(5)
-    stallone = browser.find_element_by_xpath('nbsp')
-    print('El precio es: '+ str(stallone))
-'''    
-# Open the Chrome browser
-
-browser = webdriver.Chrome(webdriver_path)
-browser.get(backmarket_url)
-sleep(3)
-search_bar = browser.find_element_by_xpath('//*[@id="header"]/div[1]/form/input')
-search_bar.send_keys(search_item)
-search_bar.find_element_by_xpath('//*[@id="header"]/div[1]/form/button[2]').click()
-
-# Click en el modelo
-search_bar.find_element_by_xpath('//*[@id="main_container"]/div/div/section/div[2]/div[2]/div[1]/div/a/div[2]/span').click()
-'''
-
-BlackX()
+    print('Los archivos CSV están listos, el programa ha terminado.')
+except:
+    print('Ha surgido un error, el programa se ha detenido.')
