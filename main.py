@@ -16,6 +16,7 @@ from Models.iphoneXRblanco import iphoneXRblanco
 from Models.iphoneXSnegro import iphoneXSnegro
 from Models.iphoneXSplata import iphoneXSplata
 from Models.iphoneXSdorado import iphoneXSdorado
+from deleteCSV import deleteCSV
 
 try:
     print('El programa se ha iniciado.')
@@ -66,7 +67,9 @@ try:
     
     # Abrimos la carpeta CSV para ahorrar tiempo
     os.startfile(CSVfiles) # OJO! Sólo funciona en Windows
-    sleep(5)     
+    sleep(7)     
+    
+    deleteCSV()
     
 except:
     print('Ha surgido un error, el programa se ha detenido.')
