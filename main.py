@@ -38,5 +38,12 @@ try:
     print('Los archivos CSV están listos, el programa ha terminado.')
     sleep(5)
     
+    '''
+    os.chdir(r'C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper')
+    from combineCSV import combineCSV
+    combineCSV()
+    '''
+    
+    
 except:
     print('Ha surgido un error, el programa se ha detenido.')
