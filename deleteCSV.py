@@ -9,13 +9,11 @@ def deleteCSV():
     borrar = pyip.inputChoice(['si','no'], prompt='¿Quieres eliminar los archivos CSV?\n')
     while True:
         if borrar == 'si':
-            try:
-                shutil.rmtree(CSVfiles)
-                sleep(1)
-                print('Los archivos CSV han sido eliminados.')
-                break
-            except:
-                print('Ha surgido un error, no se han podido eliminar los archivos.')
+            shutil.rmtree(CSVfiles)
+            sleep(1)
+            print('Los archivos CSV han sido eliminados.')
+            sleep(5)
+            break
                 
         elif borrar == 'no':
             break
