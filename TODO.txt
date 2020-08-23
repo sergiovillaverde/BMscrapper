@@ -3,5 +3,6 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 * Crear interfaz que pregunte para meter enlaces y que al final del programa pregunte si se quieren eliminar los CSV
 
 * Terminar de editar deleteCSV.py y llamarlo en main.py
+    Tiene un fallo al borrar, los borra pero cierra de inmediato la ventana, crear except!!
 
 * Crear un .exe
