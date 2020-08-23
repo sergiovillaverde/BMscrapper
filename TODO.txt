@@ -1,3 +1,5 @@
 Combinar varios CSV en uno, añadir columnas para organizar los datos
 
 * Crear interfaz que pregunte para meter enlaces y que al final del programa pregunte si se quieren eliminar los CSV
+
+* Sacar el código de borrar los CSV a un .py
