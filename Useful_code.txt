@@ -22,3 +22,7 @@ for c in char_range('B', 'Z'):
 
 
 El main.py coge de Models las funciones y las ejecuta
+
+os.chdir(r'C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper')
+    from combineCSV import combineCSV
+    combineCSV()
