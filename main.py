@@ -66,10 +66,10 @@ try:
     print('Los archivos CSV están listos, el programa ha terminado.')
     
     # Abrimos la carpeta CSV para ahorrar tiempo
-    os.startfile(CSVfiles) # OJO! Sólo funciona en Windows
+    #os.startfile(CSVfiles) # OJO! Sólo funciona en Windows
     sleep(7)     
     
-    deleteCSV()
+    #deleteCSV()
     
 except:
     print('Ha surgido un error, el programa se ha detenido.')

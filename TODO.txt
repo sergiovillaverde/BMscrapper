@@ -6,3 +6,5 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
     Tiene un fallo al borrar, los borra pero cierra de inmediato la ventana, crear except!!
 
 * Crear un .exe
+
+* No borrar los CSV, actualizarlos y tratar de guardar el valor más bajo de cada uno, avisar si hay un nuevo precio más bajo y en qué calidad
