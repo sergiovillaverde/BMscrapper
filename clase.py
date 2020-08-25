@@ -1,16 +1,28 @@
 from bs4 import BeautifulSoup
 import requests, csv, os
 import pandas as pd 
+import pyinputplus as pyip 
 
 path = r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV"
 
+url = {}
+
 def getPrice():
-    url = {}
+    while True:
+        name = input('Which is the name of the phone?\n')
+        phoneURL = input('Which is the URL of the phone?\n')
+        #phoneName = name + phoneURL
+        #url = dict(phoneName.split())
+        url.update({name:phoneURL})
+        more = pyip.inputChoice(['yes','no'], prompt='Do you want to track more phones?\n')
+        if more == 'no':
+            break
+        
     # TODO las keys serán el nombre del móvil y los values serán las url
     
     for k, v in url.items():
-        url = str(v)
-        response = requests.get(url)
+        link = str(v)
+        response = requests.get(link)
         content = BeautifulSoup(response.content, "html.parser")
         
         state = []
@@ -35,3 +47,5 @@ def getPrice():
                     writer.writerow(row[:-1])
                     
         os.remove('test.csv')
+        
+getPrice()
