@@ -22,6 +22,14 @@ def iphoneXRrojo():
     # Esto borra lo que tenga el CSV y escribe el diccionario
     # Cambiamos de directorio para guardar el CSV
     os.chdir(r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV")
-    with open('iPhoneXRrojo.csv', 'w') as f:
+    with open('XRrojo.csv', 'w') as f:
             for key in precioXRrojo.keys():
                 f.write("%s,%s\n"%(key,precioXRrojo[key]))
+                
+    with open('XRrojo.csv', 'r') as file_in:
+        with open('iPhoneXRrojo.csv', 'w') as file_out:
+            writer = csv.writer(file_out)
+            for row in csv.reader(file_in):
+                writer.writerow(row[:-1])
+                
+    os.remove('XRrojo.csv')

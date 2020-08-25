@@ -17,6 +17,7 @@ from Models.iphoneXSnegro import iphoneXSnegro
 from Models.iphoneXSplata import iphoneXSplata
 from Models.iphoneXSdorado import iphoneXSdorado
 from deleteCSV import deleteCSV
+from combineCSV import combineCSV
 
 try:
     print('El programa se ha iniciado.')
@@ -69,6 +70,7 @@ try:
     #os.startfile(CSVfiles) # OJO! Sólo funciona en Windows
     sleep(7)     
     
+    #combineCSV()
     #deleteCSV()
     
 except:
