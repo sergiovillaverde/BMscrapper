@@ -3,5 +3,3 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 * Crear interfaz que pregunte para meter enlaces y que al final del programa pregunte si se quieren eliminar los CSV
 
 * Crear un .exe
-
-* Que no pregunte para cargar csv si el csv no existe
