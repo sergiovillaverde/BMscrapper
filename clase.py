@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests, csv, os
 import pandas as pd 
 import pyinputplus as pyip 
+from pathlib import Path
 
 path = r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV"
 
@@ -11,21 +12,22 @@ def getPrice():
     loadNum = 0
     
     while True:
-        # Ask the user to load the CSV with the info of the devices to create the dict
-        if loadNum < 1:
-            load = pyip.inputChoice(['yes','no'], prompt='Do you want to load the previous consult?\n')
-            if load == 'yes':
-                with open('phonesURL.csv', 'r') as infile:
-                    reader = csv.reader(infile)
-                    with open('csvtodict.csv', 'w') as outfile:
-                        writer = csv.writer(outfile)
-                        url = {rows[0]:rows[1] for rows in reader}
-            
-                os.remove('csvtodict.csv')
-                loadBool = True
-                break
-            elif load == 'no':
-                loadNum = 1
+        
+            # Ask the user to load the CSV with the info of the devices to create the dict
+            if loadNum < 1:
+                load = pyip.inputChoice(['yes','no'], prompt='Do you want to load the previous consult?\n')
+                if load == 'yes':
+                    with open('phonesURL.csv', 'r') as infile:
+                        reader = csv.reader(infile)
+                        with open('csvtodict.csv', 'w') as outfile:
+                            writer = csv.writer(outfile)
+                            url = {rows[0]:rows[1] for rows in reader}
+                
+                    os.remove('csvtodict.csv')
+                    loadBool = True
+                    break
+                elif load == 'no':
+                    loadNum = 1
         
         # Ask the user for the name and URL of the device
         name = input('Which is the name of the phone?\n')
