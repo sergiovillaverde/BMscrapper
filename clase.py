@@ -5,23 +5,27 @@ import pyinputplus as pyip
 
 path = r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV"
 
-loadNum = False
-url = {}
-
 def getPrice():
+    url = {}
+    loadBool = False
+    loadNum = 0
+    
     while True:
         # Ask the user to load the CSV with the info of the devices to create the dict
-        load = pyip.inputChoice(['yes','no'], prompt='Do you want to load the previous consult?\n')
-        if load == 'yes':
-            with open('phonesURL.csv', 'r') as infile:
-                reader = csv.reader(infile)
-                with open('csvtodict.csv', 'w') as outfile:
-                    writer = csv.writer(outfile)
-                    url = {rows[0]:rows[1] for rows in reader}
-        
-            os.remove('csvtodict.csv')
-            loadNum = True
-            break
+        if loadNum < 1:
+            load = pyip.inputChoice(['yes','no'], prompt='Do you want to load the previous consult?\n')
+            if load == 'yes':
+                with open('phonesURL.csv', 'r') as infile:
+                    reader = csv.reader(infile)
+                    with open('csvtodict.csv', 'w') as outfile:
+                        writer = csv.writer(outfile)
+                        url = {rows[0]:rows[1] for rows in reader}
+            
+                os.remove('csvtodict.csv')
+                loadBool = True
+                break
+            elif load == 'no':
+                loadNum = 1
         
         # Ask the user for the name and URL of the device
         name = input('Which is the name of the phone?\n')
@@ -34,7 +38,7 @@ def getPrice():
             break
     
     # Ask the user to save the info of the chosen devices
-    if loadNum == False:
+    if loadBool == False:
         save = pyip.inputChoice(['yes','no'], prompt='Do you want to save the URL for the next time?\n')
         if save == 'yes':
             with open('phonesURL.csv', 'w') as f:

@@ -9,4 +9,5 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 
 * No borrar los CSV, actualizarlos y tratar de guardar el valor más bajo de cada uno, avisar si hay un nuevo precio más bajo y en qué calidad
 
-* Guardar el dict con nombres y url en un archivo para consultarlo más tarde y no meter siempre nombre y url
+* Que no pregunte para cargar csv si el csv no existe
+    si quiero guardar más móviles que no pregunte para cargar el archivo
