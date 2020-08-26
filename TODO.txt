@@ -2,12 +2,6 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 
 * Crear interfaz que pregunte para meter enlaces y que al final del programa pregunte si se quieren eliminar los CSV
 
-* Terminar de editar deleteCSV.py y llamarlo en main.py
-    Tiene un fallo al borrar, los borra pero cierra de inmediato la ventana, crear except!!
-
 * Crear un .exe
 
-* No borrar los CSV, actualizarlos y tratar de guardar el valor más bajo de cada uno, avisar si hay un nuevo precio más bajo y en qué calidad
-
 * Que no pregunte para cargar csv si el csv no existe
-    si quiero guardar más móviles que no pregunte para cargar el archivo
