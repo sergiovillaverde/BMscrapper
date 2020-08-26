@@ -8,3 +8,5 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 * Crear un .exe
 
 * No borrar los CSV, actualizarlos y tratar de guardar el valor más bajo de cada uno, avisar si hay un nuevo precio más bajo y en qué calidad
+
+* Guardar el dict con nombres y url en un archivo para consultarlo más tarde y no meter siempre nombre y url

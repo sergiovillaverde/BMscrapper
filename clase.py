@@ -31,8 +31,6 @@ def getPrice():
             
         phonePrice = dict(zip(state,price))
         
-        print(phonePrice)
-        
         os.chdir(path)
         with open('test.csv', 'w') as f:
             for key in phonePrice.keys():
@@ -45,5 +43,7 @@ def getPrice():
                     writer.writerow(row[:-1])
                     
         os.remove('test.csv')
+        
+        print(k + ' price was tracked.')
         
 getPrice()
