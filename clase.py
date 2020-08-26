@@ -12,7 +12,8 @@ def getPrice():
     loadNum = 0
     
     while True:
-        
+        CSVexist = os.path.isfile('./phonesURL.csv')
+        if CSVexist == True:
             # Ask the user to load the CSV with the info of the devices to create the dict
             if loadNum < 1:
                 load = pyip.inputChoice(['yes','no'], prompt='Do you want to load the previous consult?\n')
