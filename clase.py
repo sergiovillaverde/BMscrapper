@@ -17,8 +17,6 @@ def getPrice():
         more = pyip.inputChoice(['yes','no'], prompt='Do you want to track more phones?\n')
         if more == 'no':
             break
-        
-    # TODO las keys serán el nombre del móvil y los values serán las url
     
     for k, v in url.items():
         link = str(v)
