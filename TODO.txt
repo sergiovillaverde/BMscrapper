@@ -3,3 +3,12 @@ Combinar varios CSV en uno, añadir columnas para organizar los datos
 * Crear interfaz que pregunte para meter enlaces y que al final del programa pregunte si se quieren eliminar los CSV
 
 * Crear un .exe
+
+##################
+
+++  INTERFAZ  ++
+
+Botón para cargar archivo, botón para introducir datos a mano.
+
+    -> El botón para cargar sólo debe funcionar si existe el archivo, debe funcionar como ahora, cargarlo de los archivos del programa
+    -> El botón de introducir a mano debe aparecer dos casillas, una para el nombre y otra para meter la URL
