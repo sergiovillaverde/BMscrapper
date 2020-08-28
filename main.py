@@ -77,3 +77,4 @@ def getPrice():
         print(k + ' price was tracked.')
         
 getPrice()
+print('All prices tracked, task completed.')
