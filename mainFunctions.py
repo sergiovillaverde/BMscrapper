@@ -28,19 +28,20 @@ def load():
                     
             os.remove('csvtodict.csv')
 
-def manualInput():
+def manualInput(name,phoneURL):
     # Variables globales
     global url
     
     while True:
         # función para meter los datos a mano
-        name = input('Which is the name of the device?\n')
-        phoneURL = input('Which is the URL of the device?\n')
+        name = str #input('Which is the name of the device?\n')
+        phoneURL = str #input('Which is the URL of the device?\n')
         url.update({name:phoneURL})
         more = pyip.inputChoice(['yes','no'], prompt='Do you want to track more devices?\n')    
         if more == 'no':
             break
-        
+
+def save():
     save = pyip.inputChoice(['yes','no'], prompt='Do you want to save your selection?\n')
     if save == 'yes':
         with open('phonesURL.csv','w') as f:
