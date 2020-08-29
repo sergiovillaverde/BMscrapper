@@ -1,4 +1,4 @@
-from mainFunctions import load, manualInput, save, getInfo, url, path
+from mainFunctions import load, manualInput, save, getInfo, url, path, tracked
 import tkinter, os
 
 window = tkinter.Tk()
@@ -21,15 +21,6 @@ def pressed():
 
     send = tkinter.Button(window, text='save', command=inputs)
     send.pack()
-
-# Check if file exist
-CSVexist = os.path.isfile('./phonesURL.csv')
-if CSVexist == True:    
-    loadButton = tkinter.Button(window, text='Load', command=load)
-    loadButton.pack()
-
-mInputButton = tkinter.Button(window, text='Manual input', command=pressed)
-mInputButton.pack()
     
 def inputs():
     # Global variables
@@ -44,10 +35,32 @@ def inputs():
 # Etiqueta que pregunte si quiero hacer save
 # Dos botones, si y no, si presiono si hace save si presiono no sale de ese bucle
 
+# 1 - Ventana pequeña con los botones de load o manual
+def initialWindow():
+    CSVexist = os.path.isfile('./phonesURL.csv') # Check if file exist
+    if CSVexist == True:    
+        loadButton = tkinter.Button(window, text='Load', command=loadPressed)
+        loadButton.pack()
 
+    mInputButton = tkinter.Button(window, text='Manual input', command=pressed)
+    mInputButton.pack()
 
+# 2 - Si pulsamos load pasamos a la ventana con el progreso
+def loadPressed():
+    window.geometry("300x300")
+    load()
+    getInfo()
+    done = tkinter.Label(window, text='Prices tracked.')
+    done.pack()
 
-
+# 3 - Si pulsamos manual input cambiamos ventana y aparecen cuadros de input
+def manualPresses():
+    # Global variables
+    global nameInput, urlInput
+    
+    name = str(nameInput.get())
+    url = str(urlInput.get())
+    manualInput(name,url)
 
 
 

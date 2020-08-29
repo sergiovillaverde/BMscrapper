@@ -8,6 +8,7 @@ import pandas as pd
 url = dict
 # Path va a dar problemas en otros PCs
 path = r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV"
+tracked = str
 
 # Crear loadNum para sacar del loop esta función si fuera necesario
 def load():
@@ -78,4 +79,5 @@ def getInfo():
                     writer.writerow(row[:-1])
                     
         os.remove('test.csv')
-        print(k + ' price was tracked.')
+        tracked = str(k + ' price was tracked.')
+        print(tracked)

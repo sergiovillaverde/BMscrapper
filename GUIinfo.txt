@@ -1,0 +1,10 @@
+Se abre la ventana
+
+Aparece el botón de manual input siempre y el de load sólo si el archivo csv existe
+
+    Si pulsamos el de load cambia la ventana y muestra otra con los mensajes de "X price was tracked"
+    Si pulsamos el de manual input cambia la ventana y muestra dos casillas de texto, una para el nombre y otra para la url, esta info se meterá en manualInput()
+        Debe preguntar si queremos añadir más después de cada dispositivo que metamos
+        Una vez digamos que no queremos meter más dispositivos debe preguntar si queremos guardarlos en un csv
+
+        Después debe cambiar a la ventana de progreso que se usa si pulsamos load
