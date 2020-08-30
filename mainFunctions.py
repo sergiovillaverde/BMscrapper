@@ -38,9 +38,9 @@ def manualInput(name,phoneURL):
         name = str #input('Which is the name of the device?\n')
         phoneURL = str #input('Which is the URL of the device?\n')
         url.update({name:phoneURL})
-        more = pyip.inputChoice(['yes','no'], prompt='Do you want to track more devices?\n')    
+        '''more = pyip.inputChoice(['yes','no'], prompt='Do you want to track more devices?\n')    
         if more == 'no':
-            break
+            break'''
 
 def save():
     save = pyip.inputChoice(['yes','no'], prompt='Do you want to save your selection?\n')
