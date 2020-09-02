@@ -1,0 +1,36 @@
+# Librerías que hay que importar
+    from bs4 import BeautifulSoup
+        Librería utilizada para analizar el código HTML y sacar la información requeria
+    
+    import requests, csv, os
+        La librería requests se utiliza para obtener el contenido del enlace de la web, la librería csv se utiliza para gestionar todo lo relacionado con los archivos csv y la librería os se utiliza para cambiar el directorio activo y eliminar archivos.
+
+    import pandas as pd 
+        *creo que no se utiliza
+
+    import pyinputplus as pyin
+        Se utiliza para mejorar los casos donde se pide un input al usuario, para validar la respuesta que da dándole sólo las opciones que deseemos.
+
+    from pathlib import Path 
+        *no se utiliza  
+
+###############################
+
+    path = r"C:\Users\svill\Documents\Programación\Proyectos cortos Python\Backmarket scrapper\BMscrapper\CSV"
+
+En esta línea creamos una variable que es un raw string y guarda la ruta de la carpeta CSV. La utilizaremos más adelante.
+
+    def get price():
+
+Todo el programa está dentro de esta función para facilitar su uso y líneas posteriores que queramos utilizar como un print para avisar de que ya terminó.
+
+    url = {}
+    loadBool = False
+    loadNum = 0
+
+Variables que necesitamos, url es un diccionario, loadBool es un bool y loadNum es un int, serán usados para la función de cargar un csv.
+
+    while True:
+
+Se utiliza un while para facilitar la ejecución de respuestas del usuario, así cuando no quiera añadir más dispositivos por ejemplo rompemos el while y seguimos con la función.
+
